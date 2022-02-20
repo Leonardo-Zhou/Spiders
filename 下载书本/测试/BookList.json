@@ -1,0 +1,23 @@
+[
+    {
+        "item_num": 0,
+        "name": "Learn Python in One Day and Learn It Well: Python for Beginners with Hands-on Project",
+        "book_url": "https://ca1lib.org/book/2519956/2c2800",
+        "type": "EPUB",
+        "publisher": "CreateSpace Independent Publishing Platform"
+    },
+    {
+        "item_num": 1,
+        "name": "Python Basics: A Self-Teaching Introduction",
+        "book_url": "https://ca1lib.org/book/3641986/812370",
+        "type": "PDF",
+        "publisher": "Mercury"
+    },
+    {
+        "item_num": 2,
+        "name": "Beginning Programming with Python for Dummies",
+        "book_url": "https://ca1lib.org/book/3601991/d7c3d6",
+        "type": "PDF",
+        "publisher": "John Wiley & Sons"
+    }
+  ]

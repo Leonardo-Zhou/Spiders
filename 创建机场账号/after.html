@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+
+<!-- General CSS Files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
+
+<!-- Template CSS -->
+<link rel="stylesheet" href="/theme/malio/css/style-purple.css">
+<link rel="stylesheet" href="/theme/malio/assets/css/components.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/theme/malio/css/malio.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123456789-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-123456789-1');
+</script>
+
+<!-- Google Analytics -->
+<script>
+    window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-143778338-1', 'auto');
+    var hostDomain = window.location.host || document.location.host || document.domain;
+    ga('set', 'dimension1', hostDomain);
+    ga('send', 'pageview');
+    (function () {
+        function perfops() {
+            var js = document.createElement('script');
+            js.src = 'https://cdn.jsdelivr.net/npm/perfops-rom';
+            document.body.appendChild(js);
+        }
+        if (document.readyState === 'complete') {
+            perfops();
+        } else {
+            window.addEventListener('load', perfops);
+        }
+    })();
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<!-- End Google Analytics -->
+
+<!-- Chatra -->
+<script>
+    window.ChatraSetup = {
+      clientId: 'b9633aaf-6fbd-3cbd-ada1-7d7b5abf137e',
+      colors: {
+        buttonText: '#fff',
+        buttonBg: '#4958F7'
+      },
+      
+      locale: {
+        "customStrings": {
+          "welcome": "有疑问吗? 联系我们!",
+          "chatWithUs": "与客服对话",
+          "leaveUsAMessage": "给我们留言",
+          "mobile_chatWithUs": "对话",
+          "mobile_leaveUsAMessage": "留言",
+          "offlineNote": "有任何疑问都可以留言，我们上线后会尽快回复。",
+          "bot_thanksForMessage": "已收到你的信息，",
+          "bot_startOnline": "我们会尽快回复。",
+          "bot_startOnline_email": "我们会尽快回复，信息将会发送到此对话框或您的邮箱 ({{#email}})",
+          "bot_startOnline_required": "填写昵称和邮箱即可与客服对话，我们会尽快回复。",
+          "bot_startOffline": "我们会尽快回复。",
+          "bot_startOffline_email": "我们会尽快回复，信息将会发送到此对话框或您的邮箱 ({{#email}})",
+          "bot_startOffline_required": "填写昵称和邮箱后即可留言，收到留言后我们会尽快回复。",
+          "bot_beforeForm": "请输入你的昵称和邮箱:",
+          "bot_afterForm": "谢谢！",
+          "bot_afterForm_email": "谢谢, 回复的信息将会发送到此对话框或您的邮箱。",
+          "bot_details": "请详细描述你遇到的问题，尽量上传截图，以方便我们帮你快速解决问题。"
+        },
+        "online": "在线",
+        "loading": "加载中...",
+        "chat": {
+          "empty": "Nothing here",
+          "input": {
+            "placeholder": "输入信息...",
+            "oneMore": "输入信息...",
+            "notIntroduced": "请输入你的昵称和邮箱",
+            "reply": "回复 {{#name}}..."
+          },
+          "send": "发送",
+          "messagesCount": "总共 {{#count}} 条信息",
+          "noMessages": "没有信息",
+          "newMessage": "新信息",
+          "retrievingHistory": "正在加载聊天记录...",
+          "more": "加载更多...",
+          "loading": "加载中...",
+          "introduce": "请提供你的昵称和邮箱",
+          "insertEmoji": "输入Emoji"
+        },
+        "name": "昵称",
+        "yourName": "你的昵称",
+        "email": "邮箱",
+        "message": "信息",
+        "submit": "提交",
+        "saved": "保存",
+        "change": "更改",
+        "cancel": "取消",
+        "messageTypes": {
+          "welcome": "欢迎",
+          "joinedFirst": "加入对话",
+          "joined": "{{#username}} 已加入对话",
+          "left": "{{#username}} 离开了对话",
+          "agentsOffline": "无人在线"
+        },
+        "agent": "客服",
+        "typing": "正在输入",
+        "areTyping": "正在输入",
+        "minimize": "最小化",
+        "date": {
+          "month": {
+            "full": "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月",
+            "short": "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月",
+          },
+          "am": "上午_下午",
+          "moment": "刚刚",
+          "minute": "{{#count}}分钟前",
+          "hour": "{{#count}}小时前",
+          "day": "{{#count}}天前",
+          "today": "今天",
+          "yesterday": "昨天",
+          "format": {
+            "date": "MMMM D",
+            "dateWithYear": "YYYY MMMM D",
+            "when": "MMM D",
+            "whenWithYear": "YYYY MMM D",
+            "time": "h:mm A"
+          }
+        },
+        "status": {
+          "waiting": "{{$connecting}}",
+          "connecting": "连接中...",
+          "failed": "连接失败",
+          "offline": "离线",
+          "retry": "重新连接"
+        },
+        "smile": {
+          "sorry": "¯\\_(ツ)_/¯"
+        },
+        "error": {
+          "weird": "Weird error :-/",
+          "incorrectEmail": "Incorrect email",
+          "emptyEmail": "Empty email field",
+          "emptyMessage": "Write something",
+          "denied": "Access denied",
+          "formNotDone": "The form has not been completed"
+        },
+        "and": "和",
+        "close": "关闭",
+        "requiredField": "Required field",
+        "_chatra": {
+          "logo": "Chatra",
+          "phrase": "We run on",
+          "chatra": "Chatra"
+        },
+        "messageSent": "Message sent!",
+        "active": "Active",
+        "activeShort": "Active less than an hour ago",
+        "activeLong": "Active some time ago",
+        "sending": "发送中...",
+        "sent": "已发送",
+        "unsent": "unsent, please introduce yourself",
+        "notSeen": "未读",
+        "seen": "已读",
+        "units": {
+          "b": "B",
+          "kb": "KB",
+          "mb": "MB",
+          "gb": "GB"
+        },
+        "dropToUpload": "拖拽文件到这里上传",
+        "uploadFile": "上传文件",
+        "uploadFailed": "上传失败",
+        "maximumFileSize": "文件大小不能超过 {{#size}} MB",
+        "comment": "评论",
+        "update": "更新",
+        "optional": "可选"
+      }
+
+    };
+
+  
+
+  (function (d, w, c) {
+    w.ChatraID = '';
+    var s = d.createElement('script');
+    w[c] = w[c] || function () {
+      (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+  })(document, window, 'Chatra');
+</script>
+<!-- /Chatra -->
+  <title>首页 &mdash; Jssr</title>
+
+  <!-- C3 chart css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/c3@0.6.8/c3.min.css">
+
+  <style>
+    .card-header i {
+      vertical-align: 1px;
+      font-size: 1rem;
+    }
+
+    .section .section-header .section-header-breadcrumb {
+      flex-basis: 0;
+    }
+
+    .wizard-step-active {
+      cursor: pointer;
+    }
+
+    .btn-quantumult {
+      background: linear-gradient(to right, black, black) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.38);
+      margin-bottom: 16px;
+    }
+    .btn-shadowrocket {
+      background: linear-gradient(to right, #3671b9, #3671b9) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px #3671b99a;
+      margin-bottom: 16px;
+    }
+    .btn-kitsunebi {
+      background: linear-gradient(to right, #f2885b, #e83c9a) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 4px #ff567885;
+      margin-bottom: 16px;
+    }
+    .btn-ssr {
+      background: linear-gradient(to right, #e780a3, #e780a3) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px #e780a2b0;
+      margin-bottom: 16px;
+    }
+    .btn-v2ray {
+      background: linear-gradient(to right, #df268f, #a73178) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px #df268f63;
+      margin-bottom: 16px;
+    }
+    .btn-ss {
+      background: linear-gradient(to right, #187abb, #187abb) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px #3671b99a;
+      margin-bottom: 16px;
+    }
+    .btn-surge {
+      background: linear-gradient(to right, #5c97f0, #b769f3) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px #8d7cfab2;
+      margin-bottom: 16px;
+    }
+    .btn-clash {
+      background: linear-gradient(to right, #49BCFC, #3B92F8) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px rgba(73, 189, 252, 0.521);
+      margin-bottom: 16px;
+    }
+    .btn-surfboard {
+      background: linear-gradient(to right, #303030, #303030) !important;
+      color: white !important;
+      border-color: transparent;
+      border: none;
+      box-shadow: 0 2px 6px #3030306e;
+      margin-bottom: 16px;
+    }
+    .wizard-steps .wizard-step .wizard-step-label {
+        text-transform: none;
+    }
+        .buttons a {
+      width: 230px;
+    }
+      </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+<nav class="navbar navbar-expand-lg main-navbar">
+  <form class="form-inline mr-auto">
+    <ul class="navbar-nav mr-3">
+      <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </form>
+  <ul class="navbar-nav navbar-right">
+        <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg nav-link-user"><i class="fas fa-language" style="vertical-align: -2px; padding-right: 2px;"></i> 简体中文</a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="##" class="dropdown-item has-icon" onclick="changeLang('en')">
+          🇬🇧 English
+        </a>
+        <a href="##" class="dropdown-item has-icon" onclick="changeLang('zh-cn')">
+          🇨🇳 简体中文
+        </a>
+      </div>
+    </li>
+        <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+        <img alt="image" src="https://secure.gravatar.com/avatar/5276ae40eac91247fa22b21db06bbbfb?d=retro" class="rounded-circle mr-1">
+        <div class="d-sm-none d-lg-inline-block">Hi, dBQNdaKjfSHEyrt</div>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="/user/profile" class="dropdown-item has-icon">
+          <i class="fas fa-user"></i> 我的账号
+        </a>
+                <a href="/user/code" class="dropdown-item has-icon">
+          <i class="fas fa-wallet"></i> 我的钱包
+        </a>
+                        <a href="/user/invite" class="dropdown-item has-icon">
+          <i class="fas fa-laugh-squint"></i> 邀请注册
+        </a>
+                <div class="dropdown-divider"></div>
+        <a href="/user/logout" class="dropdown-item has-icon text-danger">
+          <i class="fas fa-sign-out-alt"></i> 退出登录
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div class="main-sidebar sidebar-style-2">
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <a href="/">Jssr</a>
+    </div>
+    <div class="sidebar-brand sidebar-brand-sm">
+      <a href="/">ML</a>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a class="nav-link" href="/user"><i class="fab fa-fort-awesome"></i> <span>首页</span></a></li>
+      <li><a class="nav-link" href="/user/shop"><i class="fas fa-store"></i> <span>商店</span></a></li>
+      <li class="menu-header">我的</li>
+      <li><a class="nav-link" href="/user/profile"><i class="fas fa-user"></i> <span>我的账号</span></a></li>
+            <li><a class="nav-link" href="/user/code"><i class="fas fa-wallet"></i> <span>我的钱包</span></a></li>
+                  <li><a class="nav-link" href="/user/invite"><i class="fas fa-laugh-squint"></i> <span>邀请注册</span></a></li>
+            <li class="menu-header">使用</li>
+      <li><a class="nav-link" href="/user/node"><i class="fas fa-server"></i> <span>节点列表</span></a></li>
+      <li><a class="nav-link" href="/user/tutorial"><i class="fas fa-book"></i> <span>下载和教程</span></a></li>
+                        <li class="dropdown">
+          <a href="#ticket" class="nav-link has-dropdown"><i class="fas fa-headset"></i> <span>工单支持</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="/user/ticket/create"><span>新建工单</span></a></li>
+            <li><a class="nav-link" href="/user/ticket">工单列表</a></li>
+          </ul>
+        </li>
+                        <li><a class="nav-link" href="/user/edit"><i class="fas fa-cog"></i> <span>节点设置</span></a></li>
+                      </ul>
+
+              </aside>
+</div>
+            <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>首页</h1>
+            <div class="section-header-breadcrumb">
+              <div id="checkin-div" class="breadcrumb-item active">
+                                <a href="#" class="btn btn-icon disabled icon-left btn-primary"><i class="far fa-calendar-check"></i> 明日再来</a>
+                              </div>
+            </div>
+          </div>
+                                                <div class="alert alert-primary">
+                您的可用流量不足5GB，如需更多流量，可前往会员商店购买流量叠加包。
+              </div>
+                                          <div class="alert alert-primary">
+                <a href="/user/tutorial" class="alert-link" style="font-weight:400">新手上路？<b>点我下载客户端</b>，轻松上手！</a>
+              </div>
+                            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="card card-statistic-2">
+                    <div class="card-icon shadow-primary bg-primary">
+                      <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h4>会员时长</h4>
+                      </div>
+                      <div class="card-body">
+                                                <span class="counter">1</span> 天
+                                              </div>
+                    </div>
+                    <div class="card-stats">
+                      <div class="card-stats-title" style="padding-top: 0;padding-bottom: 4px;">
+                        <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb">
+                            <li class="breadcrumb-item active" aria-current="page">
+                                                              VIP1:
+                              
+                                                              2021-11-23 过期
+                                                          </li>
+                          </ol>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="card card-statistic-2">
+                    <div class="card-icon shadow-success bg-success">
+                      <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h4>剩余流量</h4>
+                      </div>
+                      <div class="card-body">
+                        <span class="counter">2.94</span> GB
+                      </div>
+                      <div class="card-stats">
+                        <div class="card-stats-title" style="padding-top: 0;padding-bottom: 4px;">
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item active" aria-current="page">今日已用: 0B</li>
+                            </ol>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="card card-statistic-2">
+                    <div class="card-icon shadow-info bg-info">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h4>在线设备数</h4>
+                      </div>
+                      <div class="card-body">
+                        <span class="counter">0</span> / <span class="counterup">2</span>                      </div>
+                      <div class="card-stats">
+                        <div class="card-stats-title" style="padding-top: 0;padding-bottom: 4px;">
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item active" aria-current="page">上次使用时间: 从未使用过</li>
+                            </ol>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                  <div class="card card-statistic-2">
+                    <div class="card-icon shadow-warning bg-warning">
+                      <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="card-wrap">
+                      <div class="card-header">
+                        <h4>钱包余额</h4>
+                      </div>
+                      <div class="card-body">
+                        ¥ <span class="counter">0.00</span>
+                      </div>
+                      <div class="card-stats">
+                        <div class="card-stats-title" style="padding-top: 0;padding-bottom: 4px;">
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item active" aria-current="page">累计获得返利金额: ¥0</li>
+                            </ol>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 col-md-7 col-lg-7">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4><i class="fas fa-bullhorn"></i> 公告</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 id="h1--11-"><a name="双11活动" class="reference-link"></a><span class="header-link octicon octicon-link"></span>双11活动</h1><h3 id="h3--jssr"><a name="全场八折优惠码:JSSR" class="reference-link"></a><span class="header-link octicon octicon-link"></span>全场八折优惠码:JSSR</h3><h6 id="h6--2021-11-11"><a name="到期时间:2021.11.11" class="reference-link"></a><span class="header-link octicon octicon-link"></span>到期时间:2021.11.11</h6><h4 id="h4--v2ray-"><a name="如果您从未使用，推荐请使用V2ray，请观看  使用教程" class="reference-link"></a><span class="header-link octicon octicon-link"></span>如果您从未使用，推荐请使用V2ray，请观看<a href="/user/tutorial?os=windows&amp;client=cfw" title="使用教程">使用教程</a></h4><h4 id="h4--teegram-"><a name="有事请发工单，或者Teegram联系.   发工单" class="reference-link"></a><span class="header-link octicon octicon-link"></span>有事请发工单，或者Teegram联系. <a href="/user/ticket" title="发工单">发工单</a></h4><p>Teegram:<a href="https://t.me/joinchat/9HzfVwKgltM4ZWY1" title="点击加入电报">点击加入电报</a><br>管理员Teegram：<a href="https://t.me/mxvpnssr">https://t.me/mxvpnssr</a></p>
+<h3 id="h3--www-jssr-cc-"><a name="永久域名:www.jssr.cc (需要挂代理登录)" class="reference-link"></a><span class="header-link octicon octicon-link"></span>永久域名:www.jssr.cc (需要挂代理登录)</h3><h3 id="h3--www-jssrvpn-xyz-"><a name="国内可访问域名：www.jssrvpn.xyz (可直接访问)" class="reference-link"></a><span class="header-link octicon octicon-link"></span>国内可访问域名：www.jssrvpn.xyz (可直接访问)</h3><h4 id="h4--"><a name="我们保证您永远可以访问到本网站，并且服务永远可用! 如果您从未用过，请先阅读  使用教程" class="reference-link"></a><span class="header-link octicon octicon-link"></span>我们保证您永远可以访问到本网站，并且服务永远可用! 如果您从未用过，请先阅读<a href="/user/tutorial" title="使用教程">使用教程</a></h4><p>新用户注册后可试用部分节点，试用过期后，剩余的流量会清零，请购买套餐继续使用<br>使用邀请链接邀请注册可获5G流量和30%的循环返利（返利发工单填写收款账号领取）</p>
+<p>温馨提示：SSR客户端观看Netflix请关闭负载均匀功能！<br>温馨提示：游戏用户使用SSTAP连接进行UDP转发！</p>
+
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <h4><i class="fas fa-chart-bar" style="vertical-align: -1px;"></i> 最近72小时流量使用情况</h4>
+                      <div class="card-header-action" id="loadTrafficChart-div">
+                        <a href="##" onclick="loadTrafficChart()" class="btn btn-primary" style="display: inline-block">
+                          加载数据
+                        </a>
+                      </div>
+                    </div>
+                    <div id="chartCardbox" class="card-body">
+                      <div id="scatter-plot"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12 col-md-5 col-lg-5">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4><i class="fas fa-chart-pie"></i> 流量使用情况</h4>
+                    </div>
+                    <div class="card-body">
+                      <div id="pie-chart"></div>
+                    </div>
+                  </div>
+
+                  
+                                    <div class="card">
+                    <div class="card-header">
+                      <h4><i class="fas fa-bolt"></i> 便捷导入</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="buttons">
+                                                                          <a href="##" class="btn btn-icon icon-left btn-primary btn-clash btn-lg btn-round" onclick="importSublink('clash')"><i class="malio-clash"></i> 一键导入 ClashX / CFW / CFA 配置</a>
+                                                                        
+                                                                        <a href="##" class="btn btn-icon icon-left btn-primary btn-kitsunebi copy-text btn-lg btn-round" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?list=kitsunebi"><i class="malio-kitsunebi"></i> 复制 Kitsunebi 订阅链接</a>
+                                                
+                                                                              <a href="##" id="quan_sub" class="btn btn-icon icon-left btn-primary btn-quantumult btn-lg btn-round copy-config" onclick="importSublink('quantumult')"><i class="malio-quantumult"></i> 一键导入 Quantumult 配置</a>
+                                                  
+                                                  <a href="##" class="btn btn-icon icon-left btn-primary btn-shadowrocket btn-lg btn-round" onclick="importSublink('shadowrocket')"><i class="malio-shadowrocket"></i> 一键导入 Shadowrocket 配置</a>
+                        
+                                                                          <div class="dropdown d-inline">
+                            <button class="btn btn-primary btn-surge dropdown-toggle btn-icon btn-round btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="malio-surge mr-1"></i> Surge 托管配置
+                            </button>
+                            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                              <a class="dropdown-item" href="##" onclick="importSublink('surge2')"> 一键导入 Surge 2 托管配置</a>
+                              <a class="dropdown-item copy-text" href="##" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surge="> 复制 Surge 2 托管配置链接</a>
+                              <a class="dropdown-item" href="##" onclick="importSublink('surge3')"> 一键导入 Surge 3 托管配置</a>
+                              <a class="dropdown-item copy-text" href="##" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surge=3"> 复制 Surge 3 托管配置链接</a>
+                              <a class="dropdown-item" href="##" onclick="importSublink('surge4')"> 一键导入 Surge 4 托管配置</a>
+                              <a class="dropdown-item copy-text" href="##" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surge=4"> 复制 Surge 4 托管配置链接</a>
+                            </div>
+                          </div>
+                        
+                                                  <a href="##" class="btn btn-icon icon-left btn-primary btn-surfboard btn-lg btn-round" onclick="importSublink('surfboard')"><i class="malio-surfboard"></i> 一键导入 Surfboard 配置</a>
+                                                
+                                                  <a href="##" class="btn btn-icon icon-left btn-primary btn-ss copy-text btn-lg btn-round" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?sub=2"><i class="malio-ssr"></i> 复制 SS 订阅链接</a>
+                                                
+                                                                          <a href="##" class="btn btn-icon icon-left btn-primary btn-v2ray copy-text btn-lg btn-round" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?sub=3"><i class="malio-v2rayng"></i> 复制 V2Ray 订阅链接</a>
+                                                                        
+                                                
+                                                                        <div class="dropdown d-inline">
+                          <button class="btn btn-primary btn-ssr dropdown-toggle btn-icon btn-round btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="malio-ssr mr-1"></i> SSR 订阅链接
+                          </button>
+                          <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                            <a class="dropdown-item" href="##" onclick="importSublink('ssr')"> 一键导入 SSR 订阅链接</a>
+                            <a class="dropdown-item copy-text" href="##" data-clipboard-text="https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?sub=1"> 复制 SSR 订阅链接</a>
+                          </div>
+                        </div>
+                                                                        
+                        
+                                                
+                                              
+                                              </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        </section>
+      </div>
+            <footer class="main-footer">
+  <div class="footer-left">
+    2020 &copy; Jssr <div class="bullet"></div> <span id="copyright"></span>
+  </div>
+</footer>    </div>
+  </div>
+
+  
+  <!-- General JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tooltip.js@1.3.2/dist/umd/tooltip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
+
+<!-- JS Libraies -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.25.6/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+
+<script>
+  const i18n = {
+    'lang': "zh-cn",
+    'used': "已用 ",
+    'used-today': "今日已用 ",
+    'available': "可用 ",
+    'alredy-got-daily-bonus': "明日再来",
+    'success-got-daily-bonus': "签到成功",
+    "server-password-changed-successfully":"成功更改连接密码",
+    "encryption-changed-successfully":"成功更改加密方式",
+    "failed":"失败",
+    "protocol-and-obfs-changed-successfully":"成功设置混淆和协议",
+    "confirm":"确定",
+    "cancel":"取消",
+    "reset-config-url-confirm-modal-title":"确定要重置订阅链接吗?",
+    "reset-config-url-confirm-modal-desc":"此操作不可逆，请谨慎操作",
+    "config-url-has-been-reseted":"已重置订阅链接",
+    "config-url-reset-modal-desc":"您需要在客户端内删除旧订阅链接，然后添加新订阅链接",
+    "port-reseted-successfully":"成功重置端口",
+    "new-port":"新端口: ",
+    "customize-port-successfully":"成功定制端口",
+    "successful-purchase":"购买成功",
+    "go-to-wallet":"前往我的钱包充值",
+    "customize-inivitation-link-successfully":"成功定制邀请链接后缀",
+    "2fa-has-been-disabled":"已关闭二步验证",
+    "password-changed-successfully":"成功更改密码",
+    "your-account-has-been-deleted":"您的账号已删除，后会有期！",
+    "submitted":"已提交",
+    "this-ticket-has-been-closed":"此工单已关闭",
+    "notice":"提示",
+    "unable-import-config-on-computer-modal":'导入配置到此客户端需要在手机浏览器操作，无法在电脑端导入。',
+    "proceed":"继续操作",
+    "top-up-successful":"充值成功",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+    "":"登录",
+  }
+</script>
+
+<script src="/theme/malio/js/malio.js?v5"></script>
+
+<script>
+  var isWeixin = function () {
+    var ua = navigator.userAgent.toLowerCase();
+    return ua.match(/MicroMessenger/i) == "micromessenger";
+  };
+  if (isWeixin() == true) {
+    $('body').html('<h5 style="margin:20px">不支持在微信内访问<br>请点击右上角菜单<br>选择浏览器打开</h5>')
+  }
+  
+  $(function () {
+    new ClipboardJS('.copy-text');
+  });
+  $(".copy-text").click(function () {
+    swal({
+      type: 'success',
+      title: "已复制",
+      showConfirmButton: false,
+      timer: 1500
+    })
+  });
+
+  function joinTelegramGroup() {
+        Swal.fire({
+      title: "提示",
+      html: '加入群组之前需要在 <a href="/user/profile">我的账号</a> 页面绑定 Telegram 账号，未绑定则无法加入群组。',
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonText: "加入 Telegram 群组",
+      cancelButtonText: "取消"
+    }).then((result) => {
+      if (result.value) {
+        window.open("https://t.me/SSUnion")
+      }
+    })
+      }
+</script>
+
+
+<script>
+  window.ChatraIntegration = {
+    name: 'dBQNdaKjfSHEyrt',
+    email: 'dbqndakjfsheyrt@gmail.com',
+    'Class': '1',
+    'Class_Expire': '2021-11-23 18:43:51',
+    'Money': '0.00',
+    'Unused_Traffic': '2.94GB'
+  };
+  var userUUID = 'b9633aaf-6fbd-3cbd-ada1-7d7b5abf137e';
+</script>
+
+<script>
+  var code = "UG93ZXJlZCBieSA8YSBocmVmPSIvc3RhZmYiPlNTUEFORUw8L2E+IDxkaXYgY2xhc3M9ImJ1bGxldCI+PC9kaXY+IFRoZW1lIGJ5IDxhIGhyZWY9Imh0dHBzOi8vdC5tZS9lZGl0WFkiIHRhcmdldD0iYmxhbmsiPmVkaXRYWTwvYT4=";
+  $('#copyright').html(atob(code));
+</script>
+  <!-- Counter Up  -->
+  <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.0/lib/jquery.waypoints.min.js"></script>
+  <script src="/theme/malio/js/jquery.counterup.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+
+  <!-- C3 Chart -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@3.5.0/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/c3@0.4.10/c3.min.js"></script>
+
+  <script>
+    trafficDountChat(
+      '0B',
+      '0B',
+      '2.94GB',
+      '0.00',
+      '0.00',
+      '100.00'
+    )
+
+    $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+    });
+
+    function importSublink(client) {
+      if (client == 'quantumult') {
+        oneclickImport('quantumult', 'https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?list=quantumult');
+      }
+      if (client == 'shadowrocket') {
+        oneclickImport('shadowrocket','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?list=shadowrocket')
+      };
+      if (client == 'surfboard') {
+        oneclickImport('surfboard','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surfboard=1')
+      };
+      if (client == 'surge2') {
+        oneclickImport('surge','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surge=2')
+      };
+      if (client == 'surge3') {
+        oneclickImport('surge3','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surge=3')
+      };
+      if (client == 'surge4') {
+        oneclickImport('surge3','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?surge=4')
+      };
+      if (client == 'clash') {
+        oneclickImport('clash','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?clash=1')
+      };
+      if (client == 'ssr') {
+        oneclickImport('ssr','https://www.jinssr.cyou/link/o6enA8dXNhehnSYo?sub=1')
+      }
+    }
+
+    appName = "Jssr";
+
+    setTimeout(loadTrafficChart(), 3000);
+  </script>
+
+  <script>
+    function Copyconfig(url, id, jumpurl = "") {
+      $.ajax({
+        url: url,
+        type: 'GET',
+        async: false,
+        success: function (res) {
+          if (res) {
+            $("#result").modal();
+            $("#msg").html("获取成功");
+            $(id).data('data', res);
+            console.log(res);
+          } else {
+            $("#result").modal();
+            $("#msg").html("获取失败，请稍后再试");
+          }
+        }
+      });
+      const clipboard = new ClipboardJS('.copy-config', {
+        text: function () {
+          return $(id).data('data');
+        }
+      });
+      clipboard.on('success', function (e) {
+        var title = '已复制到您的剪贴板';
+        if (jumpurl != '') {
+          title = '复制成功，即将跳转到 APP';
+        }
+        swal({
+          type: 'success',
+          title: title,
+          showConfirmButton: false,
+          timer: 1500,
+          onClose: () => {
+            if (jumpurl != "") {
+              window.setTimeout(function () {
+                window.location.href = jumpurl;
+              }, 1000);
+            }
+          }
+        })
+      });
+      clipboard.on("error", function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        console.error('Text:', e.text);
+      });
+    }
+  </script>
+
+  </body>
+
+</html>
